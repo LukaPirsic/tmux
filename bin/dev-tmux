@@ -1,0 +1,29 @@
+# Session Name
+SESSION="dev"
+WIN_1="nVim"
+WIN_2="Downloads"
+WIN_3="OneDrive"
+WIN_4=".config"
+WIN_5="VPN"
+
+# Start New Session with our name
+tmux new-session -d -s $SESSION
+
+# Name first Window and start nvim
+tmux rename-window -t$SESSION:1 $WIN_1
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Documents/umboss/ansible/next/umboss' C-m 'clear' C-m 'nvim .' C-m
+
+# Name second Window and cd to Downloads
+tmux new-window -tdev: -n $WIN_2
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Downloads/' C-m 'clear' C-m
+
+# Name third Window and cd to OneDrive
+tmux new-window -tdev: -n $WIN_3
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/OneDrive\ -\ Umboss\ d.o.o/umboss/' C-m 'clear' C-m
+
+# Name fourth Window and cd to .config
+tmux new-window -tdev: -n $WIN_4
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/.config/' C-m 'clear' C-m
+
+# Name fifth Window and for VPN
+tmux new-window -tdev: -n $WIN_5
