@@ -30,5 +30,5 @@ tmux send-keys -t$SESSION: 'cd /Users/lpirsic/.config/' C-m 'clear' C-m
 tmux new-window -tdev: -n $WIN_5
 
 # Name sixth Window and cd to git-projects
-tmux rename-window -t$SESSION:1 $WIN_6
-tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Documents/umboss/git-projects' C-m 'clear'
+tmux new-window -tdev: -n $WIN_6
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Documents/umboss/git-projects' C-m 'clear' C-m
