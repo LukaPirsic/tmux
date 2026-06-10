@@ -12,7 +12,7 @@ tmux new-session -d -s $SESSION
 
 # Name first Window and start nvim
 tmux rename-window -t$SESSION:1 $WIN_1
-tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Documents/umboss/ansible/next/umboss' C-m 'clear' C-m 'nvim .' C-m
+tmux send-keys -t$SESSION: 'cd /Users/lpirsic/Documents/umboss/git-projects/ansible/next/umboss' C-m 'clear' C-m 'nvim .' C-m
 
 # Name second Window and cd to Downloads
 tmux new-window -tdev: -n $WIN_2
